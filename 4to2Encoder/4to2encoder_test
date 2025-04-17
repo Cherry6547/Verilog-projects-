@@ -1,0 +1,219 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5fe385ee4190 .scope module, "fourtotwoencoder_tb" "fourtotwoencoder_tb" 2 1;
+ .timescale 0 0;
+v0x5fe385f05d20_0 .var "a", 0 0;
+v0x5fe385f05de0_0 .var "b", 0 0;
+v0x5fe385f05e80_0 .var "c", 0 0;
+v0x5fe385f05f80_0 .var "d", 0 0;
+v0x5fe385f06050_0 .net "v", 0 0, L_0x5fe385f064e0;  1 drivers
+v0x5fe385f060f0_0 .net "y0", 0 0, L_0x5fe385f06c90;  1 drivers
+v0x5fe385f061c0_0 .net "y1", 0 0, L_0x5fe385f06640;  1 drivers
+S_0x5fe385ee4320 .scope module, "uut" "FourtoTwoEncoder" 2 4, 3 1 0, S_0x5fe385ee4190;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /INPUT 1 "d";
+    .port_info 4 /OUTPUT 1 "y1";
+    .port_info 5 /OUTPUT 1 "y0";
+    .port_info 6 /OUTPUT 1 "v";
+L_0x5fe385f06290 .functor OR 1, v0x5fe385f05d20_0, v0x5fe385f05de0_0, C4<0>, C4<0>;
+L_0x5fe385f063d0 .functor OR 1, L_0x5fe385f06290, v0x5fe385f05e80_0, C4<0>, C4<0>;
+L_0x5fe385f064e0 .functor OR 1, L_0x5fe385f063d0, v0x5fe385f05f80_0, C4<0>, C4<0>;
+L_0x5fe385f06640 .functor OR 1, v0x5fe385f05d20_0, v0x5fe385f05de0_0, C4<0>, C4<0>;
+L_0x5fe385f06730 .functor NOT 1, v0x5fe385f05d20_0, C4<0>, C4<0>, C4<0>;
+L_0x5fe385f067a0 .functor AND 1, v0x5fe385f05e80_0, L_0x5fe385f06730, C4<1>, C4<1>;
+L_0x5fe385f06850 .functor NOT 1, v0x5fe385f05de0_0, C4<0>, C4<0>, C4<0>;
+L_0x5fe385f068c0 .functor AND 1, L_0x5fe385f067a0, L_0x5fe385f06850, C4<1>, C4<1>;
+L_0x5fe385f069d0 .functor OR 1, v0x5fe385f05d20_0, L_0x5fe385f068c0, C4<0>, C4<0>;
+L_0x5fe385f06a90 .functor NOT 1, v0x5fe385f05d20_0, C4<0>, C4<0>, C4<0>;
+L_0x5fe385f06b60 .functor NOT 1, v0x5fe385f05de0_0, C4<0>, C4<0>, C4<0>;
+L_0x5fe385f06bd0 .functor AND 1, L_0x5fe385f06a90, L_0x5fe385f06b60, C4<1>, C4<1>;
+L_0x5fe385f06d00 .functor NOT 1, v0x5fe385f05f80_0, C4<0>, C4<0>, C4<0>;
+L_0x5fe385f06d70 .functor AND 1, L_0x5fe385f06bd0, L_0x5fe385f06d00, C4<1>, C4<1>;
+L_0x5fe385f06c90 .functor OR 1, L_0x5fe385f069d0, L_0x5fe385f06d70, C4<0>, C4<0>;
+v0x5fe385ed89a0_0 .net *"_ivl_0", 0 0, L_0x5fe385f06290;  1 drivers
+v0x5fe385f04d30_0 .net *"_ivl_10", 0 0, L_0x5fe385f067a0;  1 drivers
+v0x5fe385f04e10_0 .net *"_ivl_12", 0 0, L_0x5fe385f06850;  1 drivers
+v0x5fe385f04ed0_0 .net *"_ivl_14", 0 0, L_0x5fe385f068c0;  1 drivers
+v0x5fe385f04fb0_0 .net *"_ivl_16", 0 0, L_0x5fe385f069d0;  1 drivers
+v0x5fe385f050e0_0 .net *"_ivl_18", 0 0, L_0x5fe385f06a90;  1 drivers
+v0x5fe385f051c0_0 .net *"_ivl_2", 0 0, L_0x5fe385f063d0;  1 drivers
+v0x5fe385f052a0_0 .net *"_ivl_20", 0 0, L_0x5fe385f06b60;  1 drivers
+v0x5fe385f05380_0 .net *"_ivl_22", 0 0, L_0x5fe385f06bd0;  1 drivers
+v0x5fe385f05460_0 .net *"_ivl_24", 0 0, L_0x5fe385f06d00;  1 drivers
+v0x5fe385f05540_0 .net *"_ivl_26", 0 0, L_0x5fe385f06d70;  1 drivers
+v0x5fe385f05620_0 .net *"_ivl_8", 0 0, L_0x5fe385f06730;  1 drivers
+v0x5fe385f05700_0 .net "a", 0 0, v0x5fe385f05d20_0;  1 drivers
+v0x5fe385f057c0_0 .net "b", 0 0, v0x5fe385f05de0_0;  1 drivers
+v0x5fe385f05880_0 .net "c", 0 0, v0x5fe385f05e80_0;  1 drivers
+v0x5fe385f05940_0 .net "d", 0 0, v0x5fe385f05f80_0;  1 drivers
+v0x5fe385f05a00_0 .net "v", 0 0, L_0x5fe385f064e0;  alias, 1 drivers
+v0x5fe385f05ac0_0 .net "y0", 0 0, L_0x5fe385f06c90;  alias, 1 drivers
+v0x5fe385f05b80_0 .net "y1", 0 0, L_0x5fe385f06640;  alias, 1 drivers
+    .scope S_0x5fe385ee4190;
+T_0 ;
+    %vpi_call 2 14 "$dumpfile", "FourtoTwoEncoder.vcd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5fe385ee4190 {0 0 0};
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05d20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05de0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05e80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5fe385f05f80_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 32 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "fourtotwoencoder_tb.v";
+    "FourtoTwoEncoder.v";
