@@ -1,0 +1,143 @@
+$date
+	Fri Apr 25 17:09:27 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module fourbitAdder_tb $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " cout $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var reg 1 % cin $end
+$scope module uut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 % cin $end
+$var wire 4 ( sum [3:0] $end
+$var wire 1 " cout $end
+$var wire 1 ) c2 $end
+$var wire 1 * c1 $end
+$var wire 1 + c0 $end
+$scope module f1 $end
+$var wire 1 , a $end
+$var wire 1 - b $end
+$var wire 1 % cin $end
+$var wire 1 + cout $end
+$var wire 1 . sum $end
+$upscope $end
+$scope module f2 $end
+$var wire 1 / a $end
+$var wire 1 0 b $end
+$var wire 1 + cin $end
+$var wire 1 * cout $end
+$var wire 1 1 sum $end
+$upscope $end
+$scope module f3 $end
+$var wire 1 2 a $end
+$var wire 1 3 b $end
+$var wire 1 * cin $end
+$var wire 1 ) cout $end
+$var wire 1 4 sum $end
+$upscope $end
+$scope module f4 $end
+$var wire 1 5 a $end
+$var wire 1 6 b $end
+$var wire 1 ) cin $end
+$var wire 1 " cout $end
+$var wire 1 7 sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+1.
+0-
+0,
+0+
+0*
+0)
+b1 (
+b0 '
+b0 &
+1%
+b0 $
+b0 #
+0"
+b1 !
+$end
+#10
+14
+17
+11
+b1110 !
+b1110 (
+0.
+13
+16
+1/
+0%
+b1100 $
+b1100 '
+b10 #
+b10 &
+#20
+b1111 !
+b1111 (
+1.
+1-
+06
+15
+b101 $
+b101 '
+b1010 #
+b1010 &
+#30
+03
+16
+12
+05
+b1001 $
+b1001 '
+b110 #
+b110 &
+#40
+0.
+b110 !
+b110 (
+07
+0-
+13
+06
+02
+b100 $
+b100 '
+b10 #
+b10 &
+#50
+1.
+01
+b1101 !
+b1101 (
+17
+1-
+0/
+15
+b101 $
+b101 '
+b1000 #
+b1000 &
+#60

@@ -1,0 +1,36 @@
+$date
+	Sat Apr 26 19:53:04 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module BinarytoGrayConverter_tb $end
+$var wire 4 ! y [3:0] $end
+$var reg 4 " a [3:0] $end
+$scope module uut $end
+$var wire 4 # a [3:0] $end
+$var wire 4 $ y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1101 $
+b1001 #
+b1001 "
+b1101 !
+$end
+#10
+b100 !
+b100 $
+b111 "
+b111 #
+#20
+b1111 !
+b1111 $
+b1010 "
+b1010 #
+#30

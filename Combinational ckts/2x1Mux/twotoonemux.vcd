@@ -1,0 +1,31 @@
+$date
+	Fri Apr 25 17:44:37 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TwotoOneMux_tb $end
+$var wire 1 ! y $end
+$var reg 2 " a [1:0] $end
+$var reg 1 # s $end
+$scope module uut $end
+$var wire 2 $ a [1:0] $end
+$var wire 1 # s $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 $
+0#
+b1 "
+1!
+$end
+#10
+0!
+1#
+#20

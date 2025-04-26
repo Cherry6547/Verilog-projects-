@@ -1,0 +1,47 @@
+$date
+	Sat Apr 26 16:38:14 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module FourbitComparator_tb $end
+$var wire 1 ! l $end
+$var wire 1 " g $end
+$var wire 1 # e $end
+$var reg 4 $ a [3:0] $end
+$var reg 4 % b [3:0] $end
+$scope module uut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 ! l $end
+$var wire 1 " g $end
+$var wire 1 # e $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 '
+b0 &
+b1 %
+b0 $
+0#
+0"
+1!
+$end
+#10
+1#
+0!
+b1111 %
+b1111 '
+b1111 $
+b1111 &
+#20
+0#
+1"
+b0 %
+b0 '
+#30

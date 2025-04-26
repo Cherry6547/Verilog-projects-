@@ -1,0 +1,103 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x58fe4ba9c190 .scope module, "MajorityVoter_tb" "MajorityVoter_tb" 2 1;
+ .timescale 0 0;
+v0x58fe4bab2040_0 .var "a", 0 0;
+v0x58fe4bab2100_0 .var "b", 0 0;
+v0x58fe4bab21d0_0 .var "c", 0 0;
+v0x58fe4bab22d0_0 .net "y", 0 0, L_0x58fe4bab2750;  1 drivers
+S_0x58fe4ba9c320 .scope module, "uut" "MajorityVoter" 2 4, 3 1 0, S_0x58fe4ba9c190;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "y";
+L_0x58fe4bab23a0 .functor AND 1, v0x58fe4bab2040_0, v0x58fe4bab2100_0, C4<1>, C4<1>;
+L_0x58fe4bab24e0 .functor AND 1, v0x58fe4bab2040_0, v0x58fe4bab21d0_0, C4<1>, C4<1>;
+L_0x58fe4bab25a0 .functor OR 1, L_0x58fe4bab23a0, L_0x58fe4bab24e0, C4<0>, C4<0>;
+L_0x58fe4bab26b0 .functor AND 1, v0x58fe4bab2100_0, v0x58fe4bab21d0_0, C4<1>, C4<1>;
+L_0x58fe4bab2750 .functor OR 1, L_0x58fe4bab25a0, L_0x58fe4bab26b0, C4<0>, C4<0>;
+v0x58fe4ba8bbe0_0 .net *"_ivl_0", 0 0, L_0x58fe4bab23a0;  1 drivers
+v0x58fe4bab19c0_0 .net *"_ivl_2", 0 0, L_0x58fe4bab24e0;  1 drivers
+v0x58fe4bab1aa0_0 .net *"_ivl_4", 0 0, L_0x58fe4bab25a0;  1 drivers
+v0x58fe4bab1b90_0 .net *"_ivl_6", 0 0, L_0x58fe4bab26b0;  1 drivers
+v0x58fe4bab1c70_0 .net "a", 0 0, v0x58fe4bab2040_0;  1 drivers
+v0x58fe4bab1d80_0 .net "b", 0 0, v0x58fe4bab2100_0;  1 drivers
+v0x58fe4bab1e40_0 .net "c", 0 0, v0x58fe4bab21d0_0;  1 drivers
+v0x58fe4bab1f00_0 .net "y", 0 0, L_0x58fe4bab2750;  alias, 1 drivers
+    .scope S_0x58fe4ba9c190;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "MajorityVoter.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x58fe4ba9c190 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab2040_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab2100_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab21d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab2040_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab2100_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab21d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab2040_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab2100_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab21d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab2040_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab2100_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab21d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab2040_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab2100_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab21d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab2040_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab2100_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab21d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab2040_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab2100_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x58fe4bab21d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab2040_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab2100_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x58fe4bab21d0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "MajorityVoter_tb.v";
+    "MajorityVoter.v";

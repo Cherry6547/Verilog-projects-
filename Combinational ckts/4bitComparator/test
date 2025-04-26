@@ -1,0 +1,83 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x564ee4109d50 .scope module, "FourbitComparator_tb" "FourbitComparator_tb" 2 1;
+ .timescale 0 0;
+v0x564ee411ff30_0 .var "a", 3 0;
+v0x564ee4120010_0 .var "b", 3 0;
+v0x564ee41200b0_0 .net "e", 0 0, L_0x564ee41209f0;  1 drivers
+v0x564ee41201b0_0 .net "g", 0 0, L_0x564ee4120da0;  1 drivers
+v0x564ee4120280_0 .net "l", 0 0, L_0x564ee4120650;  1 drivers
+S_0x564ee4109ee0 .scope module, "uut" "FourbitComparator" 2 5, 3 1 0, S_0x564ee4109d50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /INPUT 4 "b";
+    .port_info 2 /OUTPUT 1 "l";
+    .port_info 3 /OUTPUT 1 "e";
+    .port_info 4 /OUTPUT 1 "g";
+v0x564ee410a0c0_0 .net *"_ivl_0", 0 0, L_0x564ee4120320;  1 drivers
+v0x564ee411f100_0 .net *"_ivl_10", 0 0, L_0x564ee4120790;  1 drivers
+L_0x755c8d9560a8 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v0x564ee411f1c0_0 .net/2s *"_ivl_12", 1 0, L_0x755c8d9560a8;  1 drivers
+L_0x755c8d9560f0 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x564ee411f280_0 .net/2s *"_ivl_14", 1 0, L_0x755c8d9560f0;  1 drivers
+v0x564ee411f360_0 .net *"_ivl_16", 1 0, L_0x564ee4120860;  1 drivers
+L_0x755c8d956018 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v0x564ee411f490_0 .net/2s *"_ivl_2", 1 0, L_0x755c8d956018;  1 drivers
+v0x564ee411f570_0 .net *"_ivl_20", 0 0, L_0x564ee4120b70;  1 drivers
+L_0x755c8d956138 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v0x564ee411f630_0 .net/2s *"_ivl_22", 1 0, L_0x755c8d956138;  1 drivers
+L_0x755c8d956180 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x564ee411f710_0 .net/2s *"_ivl_24", 1 0, L_0x755c8d956180;  1 drivers
+v0x564ee411f7f0_0 .net *"_ivl_26", 1 0, L_0x564ee4120c10;  1 drivers
+L_0x755c8d956060 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x564ee411f8d0_0 .net/2s *"_ivl_4", 1 0, L_0x755c8d956060;  1 drivers
+v0x564ee411f9b0_0 .net *"_ivl_6", 1 0, L_0x564ee4120490;  1 drivers
+v0x564ee411fa90_0 .net "a", 3 0, v0x564ee411ff30_0;  1 drivers
+v0x564ee411fb70_0 .net "b", 3 0, v0x564ee4120010_0;  1 drivers
+v0x564ee411fc50_0 .net "e", 0 0, L_0x564ee41209f0;  alias, 1 drivers
+v0x564ee411fd10_0 .net "g", 0 0, L_0x564ee4120da0;  alias, 1 drivers
+v0x564ee411fdd0_0 .net "l", 0 0, L_0x564ee4120650;  alias, 1 drivers
+L_0x564ee4120320 .cmp/gt 4, v0x564ee4120010_0, v0x564ee411ff30_0;
+L_0x564ee4120490 .functor MUXZ 2, L_0x755c8d956060, L_0x755c8d956018, L_0x564ee4120320, C4<>;
+L_0x564ee4120650 .part L_0x564ee4120490, 0, 1;
+L_0x564ee4120790 .cmp/eq 4, v0x564ee411ff30_0, v0x564ee4120010_0;
+L_0x564ee4120860 .functor MUXZ 2, L_0x755c8d9560f0, L_0x755c8d9560a8, L_0x564ee4120790, C4<>;
+L_0x564ee41209f0 .part L_0x564ee4120860, 0, 1;
+L_0x564ee4120b70 .cmp/gt 4, v0x564ee411ff30_0, v0x564ee4120010_0;
+L_0x564ee4120c10 .functor MUXZ 2, L_0x755c8d956180, L_0x755c8d956138, L_0x564ee4120b70, C4<>;
+L_0x564ee4120da0 .part L_0x564ee4120c10, 0, 1;
+    .scope S_0x564ee4109d50;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "FourbitComparator.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x564ee4109d50 {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x564ee411ff30_0, 0, 4;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x564ee4120010_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x564ee411ff30_0, 0, 4;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x564ee4120010_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x564ee411ff30_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x564ee4120010_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 18 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "FourbitComparator_tb.v";
+    "FourbitComparator.v";

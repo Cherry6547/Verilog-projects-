@@ -1,0 +1,87 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5e6c9dde05e0 .scope module, "OnetoTwoDemux_tb" "OnetoTwoDemux_tb" 2 1;
+ .timescale 0 0;
+v0x5e6c9ddf5440_0 .var "a", 0 0;
+v0x5e6c9ddf5500_0 .var "e", 0 0;
+v0x5e6c9ddf55d0_0 .var "s", 0 0;
+v0x5e6c9ddf56d0_0 .net "y0", 0 0, L_0x5e6c9ddf5e80;  1 drivers
+v0x5e6c9ddf5770_0 .net "y1", 0 0, L_0x5e6c9ddf5d90;  1 drivers
+L_0x5e6c9ddf5d90 .part L_0x5e6c9ddf5af0, 1, 1;
+L_0x5e6c9ddf5e80 .part L_0x5e6c9ddf5af0, 0, 1;
+S_0x5e6c9dde0770 .scope module, "uut" "OnetoTwoDemux" 2 4, 3 1 0, S_0x5e6c9dde05e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "e";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 2 "y";
+L_0x5e6c9ddf5810 .functor NOT 1, v0x5e6c9ddf55d0_0, C4<0>, C4<0>, C4<0>;
+L_0x5e6c9ddf58d0 .functor AND 1, L_0x5e6c9ddf5810, v0x5e6c9ddf5440_0, C4<1>, C4<1>;
+L_0x5e6c9ddf59e0 .functor AND 1, v0x5e6c9ddf5500_0, L_0x5e6c9ddf58d0, C4<1>, C4<1>;
+L_0x5e6c9ddf5be0 .functor AND 1, v0x5e6c9ddf55d0_0, v0x5e6c9ddf5440_0, C4<1>, C4<1>;
+L_0x5e6c9ddf5c80 .functor AND 1, v0x5e6c9ddf5500_0, L_0x5e6c9ddf5be0, C4<1>, C4<1>;
+v0x5e6c9ddcfb40_0 .net *"_ivl_11", 0 0, L_0x5e6c9ddf5be0;  1 drivers
+v0x5e6c9ddf4cc0_0 .net *"_ivl_13", 0 0, L_0x5e6c9ddf5c80;  1 drivers
+v0x5e6c9ddf4da0_0 .net *"_ivl_2", 0 0, L_0x5e6c9ddf5810;  1 drivers
+v0x5e6c9ddf4e90_0 .net *"_ivl_4", 0 0, L_0x5e6c9ddf58d0;  1 drivers
+v0x5e6c9ddf4f70_0 .net *"_ivl_6", 0 0, L_0x5e6c9ddf59e0;  1 drivers
+v0x5e6c9ddf50a0_0 .net "a", 0 0, v0x5e6c9ddf5440_0;  1 drivers
+v0x5e6c9ddf5160_0 .net "e", 0 0, v0x5e6c9ddf5500_0;  1 drivers
+v0x5e6c9ddf5220_0 .net "s", 0 0, v0x5e6c9ddf55d0_0;  1 drivers
+v0x5e6c9ddf52e0_0 .net "y", 1 0, L_0x5e6c9ddf5af0;  1 drivers
+L_0x5e6c9ddf5af0 .concat8 [ 1 1 0 0], L_0x5e6c9ddf59e0, L_0x5e6c9ddf5c80;
+    .scope S_0x5e6c9dde05e0;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "OnetoTwoDemux.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5e6c9dde05e0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e6c9ddf5440_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e6c9ddf5500_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e6c9ddf55d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e6c9ddf5440_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e6c9ddf5500_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e6c9ddf55d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e6c9ddf5440_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e6c9ddf5500_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e6c9ddf55d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e6c9ddf5440_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e6c9ddf5500_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e6c9ddf55d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e6c9ddf5440_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5e6c9ddf5500_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5e6c9ddf55d0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 18 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "OnetoTwoDemux_tb.v";
+    "OnetoTwoDemux.v";

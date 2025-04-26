@@ -1,0 +1,58 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x588c690f30c0 .scope module, "TwotoOneMux_tb" "TwotoOneMux_tb" 2 1;
+ .timescale 0 0;
+v0x588c69105900_0 .var "a", 1 0;
+v0x588c691059c0_0 .var "s", 0 0;
+v0x588c69105a90_0 .net "y", 0 0, L_0x588c69116020;  1 drivers
+S_0x588c690f3250 .scope module, "uut" "TwotoOneMux" 2 5, 3 1 0, S_0x588c690f30c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /INPUT 1 "s";
+    .port_info 2 /OUTPUT 1 "y";
+v0x588c690b9cf0_0 .net *"_ivl_0", 31 0, L_0x588c69105b90;  1 drivers
+v0x588c691051b0_0 .net *"_ivl_11", 0 0, L_0x588c69115f50;  1 drivers
+L_0x7f7b79b56018 .functor BUFT 1, C4<0000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x588c69105290_0 .net *"_ivl_3", 30 0, L_0x7f7b79b56018;  1 drivers
+L_0x7f7b79b56060 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x588c69105350_0 .net/2u *"_ivl_4", 31 0, L_0x7f7b79b56060;  1 drivers
+v0x588c69105430_0 .net *"_ivl_6", 0 0, L_0x588c69115cf0;  1 drivers
+v0x588c69105540_0 .net *"_ivl_9", 0 0, L_0x588c69115e60;  1 drivers
+v0x588c69105620_0 .net "a", 1 0, v0x588c69105900_0;  1 drivers
+v0x588c69105700_0 .net "s", 0 0, v0x588c691059c0_0;  1 drivers
+v0x588c691057c0_0 .net "y", 0 0, L_0x588c69116020;  alias, 1 drivers
+L_0x588c69105b90 .concat [ 1 31 0 0], v0x588c691059c0_0, L_0x7f7b79b56018;
+L_0x588c69115cf0 .cmp/eq 32, L_0x588c69105b90, L_0x7f7b79b56060;
+L_0x588c69115e60 .part v0x588c69105900_0, 0, 1;
+L_0x588c69115f50 .part v0x588c69105900_0, 1, 1;
+L_0x588c69116020 .functor MUXZ 1, L_0x588c69115f50, L_0x588c69115e60, L_0x588c69115cf0, C4<>;
+    .scope S_0x588c690f30c0;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "twotoonemux.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x588c690f30c0 {0 0 0};
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x588c69105900_0, 0, 2;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x588c691059c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x588c69105900_0, 0, 2;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x588c691059c0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 15 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "TwotoOneMux_tb.v";
+    "TwotoOneMux.v";
