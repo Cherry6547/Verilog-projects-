@@ -1,0 +1,313 @@
+$date
+	Mon Apr 28 11:25:23 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Systolic2x2Array_tb $end
+$var wire 16 ! c11 [15:0] $end
+$var wire 16 " c10 [15:0] $end
+$var wire 16 # c01 [15:0] $end
+$var wire 16 $ c00 [15:0] $end
+$var reg 8 % a00 [7:0] $end
+$var reg 8 & a01 [7:0] $end
+$var reg 8 ' a10 [7:0] $end
+$var reg 8 ( a11 [7:0] $end
+$var reg 8 ) b00 [7:0] $end
+$var reg 8 * b01 [7:0] $end
+$var reg 8 + b10 [7:0] $end
+$var reg 8 , b11 [7:0] $end
+$var reg 1 - clk $end
+$var reg 1 . reset $end
+$scope module uut $end
+$var wire 8 / a00 [7:0] $end
+$var wire 8 0 a01 [7:0] $end
+$var wire 8 1 a10 [7:0] $end
+$var wire 8 2 a11 [7:0] $end
+$var wire 8 3 b00 [7:0] $end
+$var wire 8 4 b01 [7:0] $end
+$var wire 8 5 b10 [7:0] $end
+$var wire 8 6 b11 [7:0] $end
+$var wire 16 7 c00 [15:0] $end
+$var wire 16 8 c01 [15:0] $end
+$var wire 16 9 c10 [15:0] $end
+$var wire 16 : c11 [15:0] $end
+$var wire 1 - clk $end
+$var wire 1 . reset $end
+$var wire 16 ; cout11 [15:0] $end
+$var wire 16 < cout10 [15:0] $end
+$var wire 16 = cout01 [15:0] $end
+$var wire 16 > cout00 [15:0] $end
+$var wire 8 ? bout1 [7:0] $end
+$var wire 8 @ bout0 [7:0] $end
+$var wire 8 A aout1 [7:0] $end
+$var wire 8 B aout0 [7:0] $end
+$var reg 8 C ain00 [7:0] $end
+$var reg 8 D ain10 [7:0] $end
+$var reg 8 E bin00 [7:0] $end
+$var reg 8 F bin01 [7:0] $end
+$var reg 4 G cylce [3:0] $end
+$scope module pe00 $end
+$var wire 8 H a [7:0] $end
+$var wire 8 I b [7:0] $end
+$var wire 1 - clk $end
+$var wire 1 . reset $end
+$var reg 8 J aout [7:0] $end
+$var reg 8 K bout [7:0] $end
+$var reg 16 L cout [15:0] $end
+$upscope $end
+$scope module pe01 $end
+$var wire 8 M a [7:0] $end
+$var wire 8 N b [7:0] $end
+$var wire 1 - clk $end
+$var wire 1 . reset $end
+$var reg 8 O aout [7:0] $end
+$var reg 8 P bout [7:0] $end
+$var reg 16 Q cout [15:0] $end
+$upscope $end
+$scope module pe10 $end
+$var wire 8 R a [7:0] $end
+$var wire 8 S b [7:0] $end
+$var wire 1 - clk $end
+$var wire 1 . reset $end
+$var reg 8 T aout [7:0] $end
+$var reg 8 U bout [7:0] $end
+$var reg 16 V cout [15:0] $end
+$upscope $end
+$scope module pe11 $end
+$var wire 8 W a [7:0] $end
+$var wire 8 X b [7:0] $end
+$var wire 1 - clk $end
+$var wire 1 . reset $end
+$var reg 8 Y aout [7:0] $end
+$var reg 8 Z bout [7:0] $end
+$var reg 16 [ cout [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 [
+b0 Z
+b0 Y
+b0 X
+b0 W
+b0 V
+b0 U
+b0 T
+b0 S
+b0 R
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+b0 J
+b0 I
+b0 H
+b0 G
+b0 F
+b0 E
+b0 D
+b0 C
+b0 B
+b0 A
+b0 @
+b0 ?
+b0 >
+b0 =
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+1.
+0-
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#5
+1-
+#10
+0-
+b1001 ,
+b1001 6
+b1000 +
+b1000 5
+b111 *
+b111 4
+b110 )
+b110 3
+b101 (
+b101 2
+b100 '
+b100 1
+b11 &
+b11 0
+b10 %
+b10 /
+0.
+#15
+b1 G
+1-
+#20
+0-
+#25
+b110 E
+b110 I
+b10 C
+b10 H
+b10 G
+1-
+#30
+0-
+#35
+b1100 $
+b1100 7
+b1100 >
+b1100 L
+b110 @
+b110 K
+b110 S
+b10 B
+b10 J
+b10 M
+b111 F
+b111 N
+b1000 E
+b1000 I
+b100 D
+b100 R
+b11 C
+b11 H
+b11 G
+1-
+#40
+0-
+#45
+b1001 F
+b1001 N
+b101 D
+b101 R
+b0 E
+b0 I
+b0 C
+b0 H
+b100 G
+b11000 "
+b11000 9
+b11000 <
+b11000 V
+b110 U
+b100 A
+b100 T
+b100 W
+b1110 #
+b1110 8
+b1110 =
+b1110 Q
+b111 ?
+b111 P
+b111 X
+b10 O
+b100100 $
+b100100 7
+b100100 >
+b100100 L
+b1000 @
+b1000 K
+b1000 S
+b11 B
+b11 J
+b11 M
+1-
+#50
+0-
+#55
+b0 @
+b0 K
+b0 S
+b0 B
+b0 J
+b0 M
+b101001 #
+b101001 8
+b101001 =
+b101001 Q
+b1001 ?
+b1001 P
+b1001 X
+b11 O
+b1000000 "
+b1000000 9
+b1000000 <
+b1000000 V
+b1000 U
+b101 A
+b101 T
+b101 W
+b11100 !
+b11100 :
+b11100 ;
+b11100 [
+b111 Z
+b100 Y
+b0 F
+b0 N
+b0 D
+b0 R
+b101 G
+1-
+#60
+0-
+#65
+b110 G
+b1001001 !
+b1001001 :
+b1001001 ;
+b1001001 [
+b1001 Z
+b101 Y
+b0 U
+b0 A
+b0 T
+b0 W
+b0 ?
+b0 P
+b0 X
+b0 O
+1-
+#70
+0-
+#75
+b0 Z
+b0 Y
+b111 G
+1-
+#80
+0-
