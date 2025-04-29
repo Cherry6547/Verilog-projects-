@@ -27,8 +27,7 @@ Systolic arrays are highly parallel hardware structures commonly used for matrix
 
 ## Demo
 
-![Systolic 2x2 Array output] (/home/charan/Desktop/verilog_projects/Projects/Systolic 2x2 array/output/Systolic2x2Array.png)
-
+![Systolic 2x2 Array output](Systolic2x2Array.png)
 ## Author
 - [Charan Sai Mathkala](https://github.com/Cherry6547)
 
