@@ -1,0 +1,47 @@
+$date
+	Tue May 20 13:55:55 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module SR_Latch_tb $end
+$var wire 1 ! qbar $end
+$var wire 1 " q $end
+$var reg 1 # r $end
+$var reg 1 $ s $end
+$scope module uut $end
+$var wire 1 % nq $end
+$var wire 1 & nqbar $end
+$var wire 1 " q $end
+$var wire 1 ! qbar $end
+$var wire 1 # r $end
+$var wire 1 $ s $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1&
+1%
+0$
+0#
+1"
+1!
+$end
+#10
+0!
+0&
+1#
+#20
+0"
+0%
+1!
+1&
+0#
+1$
+#30
+1#
+#40
